@@ -5,6 +5,8 @@ import WhatsAppButton from './components/WhatsAppButton'
 import Home from './pages/Home'
 import About from './pages/About'
 import HearingAids from './pages/HearingAids'
+import HearingLoss from './pages/HearingLoss'
+import SpeechTherapy from './pages/SpeechTherapy'
 import Brands from './pages/Brands'
 import Types from './pages/Types'
 import Prices from './pages/Prices'
@@ -19,6 +21,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/hearing-aids" element={<HearingAids />} />
+          <Route path="/hearing-loss" element={<HearingLoss />} />
+          <Route path="/speech-therapy" element={<SpeechTherapy />} />
           <Route path="/brands" element={<Brands />} />
           <Route path="/types" element={<Types />} />
           <Route path="/prices" element={<Prices />} />

@@ -5,8 +5,6 @@ const brands = [
   { id: 'phonak', name: 'Phonak', color: 'from-red-500 to-red-700', desc: 'Swiss precision hearing aids trusted worldwide. Excellent Bluetooth connectivity and rechargeable options for all ages.', range: '₹20,000 – ₹2,50,000' },
   { id: 'resound', name: 'Resound', color: 'from-blue-500 to-blue-700', desc: 'Danish audiological innovation. Features unique Surround Sound technology for the most natural hearing experience.', range: '₹15,000 – ₹2,00,000' },
   { id: 'widex', name: 'Widex', color: 'from-teal-500 to-teal-700', desc: 'Pioneer in digital hearing aid technology. Known for the most natural sound quality and smallest invisible aids.', range: '₹22,000 – ₹2,30,000' },
-  { id: 'starkey', name: 'Starkey', color: 'from-green-500 to-green-700', desc: 'American innovation with health-tracking features. Only hearing aid with built-in fall detection and activity monitoring.', range: '₹25,000 – ₹2,40,000' },
-  { id: 'oticon', name: 'Oticon', color: 'from-orange-500 to-orange-700', desc: 'Danish expertise in brain hearing technology. Helps the brain work less to hear more — reducing listening fatigue.', range: '₹18,000 – ₹2,10,000' },
 ]
 
 const Brands = () => (
@@ -19,7 +17,7 @@ const Brands = () => (
     </section>
     <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {brands.map((brand) => (
             <div id={brand.id} key={brand.id} className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <div className={`bg-gradient-to-br ${brand.color} p-8 flex items-center gap-4`}>

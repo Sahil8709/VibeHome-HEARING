@@ -12,8 +12,23 @@
 .bg-hero {
   background-image: linear-gradient(to right, rgba(15,40,90,0.88), rgba(13,90,80,0.75)), url('/images/hero-bg.jpg');
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.bg-services {
+  background-image: linear-gradient(to bottom, rgba(249,250,251,0.95), rgba(249,250,251,0.95)), url('/images/services-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.bg-about {
+  background-image: linear-gradient(to right, rgba(15,40,90,0.9), rgba(13,90,80,0.8)), url('/images/about-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .bg-services {
@@ -27,3 +42,8 @@
   background-size: cover;
   background-position: center;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+

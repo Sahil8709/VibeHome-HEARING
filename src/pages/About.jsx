@@ -1,4 +1,23 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+
+const FAQItem = ({ q, a }) => {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="border border-gray-200 rounded-xl overflow-hidden">
+      <button onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors">
+        <span className="font-semibold text-gray-800 text-base pr-4">{q}</span>
+        <svg className={`w-5 h-5 text-blue-600 flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div className={`transition-all duration-300 ${open ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
+        <p className="px-6 py-4 text-gray-600 text-sm leading-relaxed bg-blue-50 border-t border-blue-100">{a}</p>
+      </div>
+    </div>
+  )
+}
 
 const About = () => {
   return (
@@ -151,6 +170,27 @@ const About = () => {
                   <p className="text-gray-400 text-xs mt-1 mb-3">{doc.exp}</p>
                   <p className="text-gray-500 text-sm leading-relaxed">{doc.info}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* FAQ */}
+          <div id="faq" className="mb-20">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3 text-center">Frequently Asked Questions</h2>
+            <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto">
+              Everything you need to know about our hearing and speech services.
+            </p>
+            <div className="space-y-3">
+              {[
+                { q: 'Is the hearing test really free?', a: 'Yes, completely free with no hidden charges. Our certified audiologist visits your home or you can visit our clinic — no obligation to purchase.' },
+                { q: 'Do you offer home visits for elderly patients?', a: 'Absolutely. Home visits are our specialty. We bring all equipment to your home so elderly or mobility-challenged patients get tested in comfort.' },
+                { q: 'Do you provide speech therapy services?', a: 'Yes! We have certified Speech-Language Pathologists who provide assessment and therapy for speech delays, stuttering, voice disorders, aphasia, and more — including home visit sessions.' },
+                { q: 'What is swallow therapy (dysphagia therapy)?', a: 'Dysphagia therapy helps patients who have difficulty swallowing due to stroke, neurological conditions, or surgery. Our therapists assess and treat swallowing disorders safely at your home.' },
+                { q: 'Which hearing aid brands do you carry?', a: 'We carry Signia, Phonak, Resound, and Widex — across all price ranges from budget to premium.' },
+                { q: 'Is there a warranty on hearing aids?', a: 'Yes. All hearing aids come with a manufacturer warranty of 1–3 years. We also provide lifetime service support and free follow-up visits.' },
+                { q: 'How many speech therapy sessions are needed?', a: 'It varies by condition. Mild speech delays may improve in 8–12 sessions, while complex cases like post-stroke aphasia may need 3–6 months of regular therapy. Your therapist will create a personalised plan.' },
+              ].map(({ q, a }) => (
+                <FAQItem key={q} q={q} a={a} />
               ))}
             </div>
           </div>

@@ -324,11 +324,11 @@ const Home = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((p) => (
               <div key={p.name} className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div className={`${p.color} h-48 overflow-hidden relative`}>
-                  <img src={p.img} alt={p.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    onError={(e) => { e.target.style.display = 'none' }} />
-                  <span className="absolute top-3 left-3 bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+                <div className={`${p.color} h-48 overflow-hidden relative flex items-center justify-center`}>
+  <img src={p.img} alt={p.name}
+    className="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-500"
+    onError={(e) => { e.target.style.display = 'none' }} />
+                  <span className="absolute top-3 left-3 bg-yellow-500/20 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
                     {p.badge}
                   </span>
                 </div>

@@ -8,14 +8,14 @@ const Footer = () => {
 
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <img src="/logo.png" alt="VibeHome Hearing & Speech" className="h-9 w-auto"
-                onError={(e) => { e.target.style.display = 'none' }} />
-              <div>
-                <span className="block text-white font-bold text-lg leading-none">VibeHome</span>
-                <span className="block text-teal-400 text-xs font-semibold tracking-wide">HEARING & SPEECH</span>
-              </div>
-            </div>
+           <div className="flex items-center gap-3 mb-4">
+  <img src="/logo.jpg" alt="VibeHome Hearing & Speech" className="h-14 w-14 object-contain"
+    onError={(e) => { e.target.style.display = 'none' }} />
+  <div>
+    <span className="block text-white font-bold text-2xl leading-none">VibeHome</span>
+    <span className="block text-teal-400 text-sm font-bold tracking-widest mt-0.5">HEARING & SPEECH</span>
+  </div>
+</div>
             <p className="text-sm leading-relaxed text-gray-400">
               Professional hearing care and speech therapy delivered to your doorstep. Trusted by thousands of families across India.
             </p>
